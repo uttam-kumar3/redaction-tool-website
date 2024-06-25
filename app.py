@@ -1,4 +1,4 @@
-from flask import Flask  # flask - module name | Flask - class name
+from flask import Flask, render_template  # flask - module name | Flask - class name
 
 app = Flask(__name__)
 
@@ -6,7 +6,7 @@ app = Flask(__name__)
 # Define route
 @app.route("/")  # @ - decoorator
 def hello_world():
-  return "Hello, World!"
+  return render_template("home.html")
 
 
 if __name__ == "__main__":
